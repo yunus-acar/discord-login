@@ -1,0 +1,18 @@
+<div>
+
+ 
+    <div >
+            <% if (user.token) { %>
+                <div >
+                    <img style="border-radius: 100%;" src="https://cdn.discordapp.com/avatars/<%= user.discordId %>/<%= user.picture %>.png" alt="Profile Picture" height="100px" width="100px"><br>
+                    <strong>NAME : </strong><%= user.name %>#<%= user.discriminator %><br>
+                    <strong>EMAIL : </strong><%= user.email %><br>
+                </div>
+
+              
+            <% } else { %>
+                <button><a href="/connect/discord">Connect Discord</a></button>
+            <% } %>
+    </div>
+    <button type="submit"><a href="/logout">Logout</a></button>
+</div>
